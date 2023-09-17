@@ -43,34 +43,15 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        // 'mysql' => [
-        //     'driver' => 'mysql',
-        //     'url' => env('DATABASE_URL'),
-        //     'host' => env('DB_HOST', '127.0.0.1'),
-        //     'port' => env('DB_PORT', '3306'),
-        //     'database' => env('DB_DATABASE', 'forge'),
-        //     'username' => env('DB_USERNAME', 'forge'),
-        //     'password' => env('DB_PASSWORD', ''),
-        //     'unix_socket' => env('DB_SOCKET', ''),
-        //     'charset' => 'utf8mb4',
-        //     'collation' => 'utf8mb4_unicode_ci',
-        //     'prefix' => '',
-        //     'prefix_indexes' => true,
-        //     'strict' => true,
-        //     'engine' => null,
-        //     'options' => extension_loaded('pdo_mysql') ? array_filter([
-        //         PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-        //     ]) : [],
-        // ],
-
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('MYSQL_HOST', '127.0.0.1'), // Change DB_HOST to MYSQL_HOST
-            'port' => env('MYSQL_PORT', '3306'),       // Change DB_PORT to MYSQL_PORT
-            'database' => env('MYSQL_DATABASE', 'forge'), // Change DB_DATABASE to MYSQL_DATABASE
-            'username' => env('MYSQL_USER', 'forge'),     // Change DB_USERNAME to MYSQL_USER
-            'password' => env('MYSQL_PASSWORD', ''),      // Change DB_PASSWORD to MYSQL_PASSWORD
-            'unix_socket' => env('DB_SOCKET', ''),        // Keep this as-is or update DB_SOCKET if needed
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -81,7 +62,7 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-        
+  
 
         'pgsql' => [
             'driver' => 'pgsql',

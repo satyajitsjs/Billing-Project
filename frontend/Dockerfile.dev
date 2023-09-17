@@ -1,7 +1,7 @@
-FROM node:18
+FROM node:18-alpine
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /app/frontend
 
 # Copy application files
 COPY . .
