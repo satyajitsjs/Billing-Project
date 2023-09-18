@@ -2,12 +2,13 @@
 FROM php:8.1
 
 # Install system dependencies and PHP extensions
-RUN apt-get update && apt-get install -y \
-    libzip-dev \
-    && docker-php-ext-install zip pdo pdo_mysql
+RUN apt-get update && apt-get install -y openssl zip unzip git libonig-dev
 
 # Install Composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Install PDO MySQL extension
+RUN docker-php-ext-install pdo mbstring pdo_mysql
 
 # Set the working directory
 WORKDIR /app/backend

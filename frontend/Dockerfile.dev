@@ -1,4 +1,5 @@
-FROM node:18-alpine
+# Use the official Node.js image based on Alpine Linux
+FROM node:18.17-alpine3.18
 
 # Set the working directory
 WORKDIR /app/frontend
